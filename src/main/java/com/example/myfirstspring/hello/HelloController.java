@@ -2,6 +2,7 @@ package com.example.myfirstspring.hello;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,5 +14,10 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello() {
         return helloService.sayHello();
+    }
+
+    @PostMapping("/names")
+    public void addUser(HelloUserRequest request){
+        helloService.addUser(request);
     }
 }
