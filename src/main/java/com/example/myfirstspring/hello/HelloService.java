@@ -18,5 +18,7 @@ public class HelloService {
         names.put(request.id(), request.name());
     }
 
-
+    public String getUser(Long id) {
+        return names.get(id);
+    }
 }
