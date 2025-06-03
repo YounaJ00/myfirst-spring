@@ -14,6 +14,10 @@ public class HelloService {
         return "Hello World!";
     }
 
+    public String sayHello(Long id) {
+        return "Hello, " + names.getOrDefault(id, "unknown") + "!";
+    }
+
     public void addUser(HelloUserRequest request) {
         names.put(request.id(), request.name());
     }

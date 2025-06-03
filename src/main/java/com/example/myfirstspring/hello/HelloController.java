@@ -23,4 +23,9 @@ public class HelloController {
         return helloService.getUser(id);
     }
 
+    @GetMapping("/hello/{id}")
+    public String sayHello(@PathVariable Long id) {
+        return helloService.sayHello(id);
+    }
+
 }
